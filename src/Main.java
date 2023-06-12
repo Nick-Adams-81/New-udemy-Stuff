@@ -17,10 +17,19 @@ public class Main {
         list.getTail();
 
         list.append(2);
+        list.append(3);
+        list.append(4);
         list.printList();
         list.getLength();
         list.getHead();
         list.getTail();
+
+        list.removeLast();
+        list.printList();
+        list.getLength();
+        list.getHead();
+        list.getTail();
+
 
 
     }
