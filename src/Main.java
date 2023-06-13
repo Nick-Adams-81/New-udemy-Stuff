@@ -99,6 +99,12 @@ public class Main {
 
         System.out.println(dll.get(2).value);
 
+        dll.set(0, 22);
+        dll.printList();
+        dll.printHead();
+        dll.printTail();
+        dll.printLength();
+
 
 
 
