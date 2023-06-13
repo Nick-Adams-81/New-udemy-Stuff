@@ -81,4 +81,19 @@ public class DLL {
         }
         length++;
     }
+
+    public Node removeFirst() {
+        if(length == 0) return null;
+        Node temp = head;
+        if(length == 1) {
+            head = null;
+            tail = null;
+        } else {
+            head = head.next;
+            temp.next = null;
+            head.prev = null;
+        }
+        length--;
+        return temp;
+    }
 }
