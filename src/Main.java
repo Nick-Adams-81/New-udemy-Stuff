@@ -36,6 +36,12 @@ public class Main {
         list.getHead();
         list.getTail();
 
+        list.removeFirst();
+        list.printList();
+        list.getLength();
+        list.getHead();
+        list.getTail();
+
 
 
     }
