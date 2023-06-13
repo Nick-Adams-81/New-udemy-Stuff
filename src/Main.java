@@ -44,6 +44,13 @@ public class Main {
 
         System.out.println(list.get(2).value);
 
+        list.set(2, 32);
+        list.printList();
+        list.getLength();
+        list.getHead();
+        list.getTail();
+
+
 
 
     }
