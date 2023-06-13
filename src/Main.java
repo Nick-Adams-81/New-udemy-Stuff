@@ -50,6 +50,13 @@ public class Main {
         list.getHead();
         list.getTail();
 
+        list.insert(2, 55);
+        list.printList();
+        list.getLength();
+        list.getHead();
+        list.getTail();
+
+
 
 
 
