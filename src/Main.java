@@ -62,6 +62,9 @@ public class Main {
         list.getHead();
         list.getTail();
 
+        list.reverse();
+        list.printList();
+
 
 
 
