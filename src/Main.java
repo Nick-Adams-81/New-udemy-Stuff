@@ -17,55 +17,61 @@ public class Main {
         list.getHead();
         list.getTail();
 
-        list.append(2);
-        list.append(3);
-        list.append(4);
-        list.printList();
-        list.getLength();
-        list.getHead();
-        list.getTail();
+//        list.append(2);
+//        list.append(3);
+//        list.append(4);
+//        list.printList();
+//        list.getLength();
+//        list.getHead();
+//        list.getTail();
+//
+//        list.removeLast();
+//        list.printList();
+//        list.getLength();
+//        list.getHead();
+//        list.getTail();
+//
+//        list.prepend(0);
+//        list.printList();
+//        list.getLength();
+//        list.getHead();
+//        list.getTail();
+//
+//        list.removeFirst();
+//        list.printList();
+//        list.getLength();
+//        list.getHead();
+//        list.getTail();
+//
+//        System.out.println(list.get(2).value);
+//
+//        list.set(2, 32);
+//        list.printList();
+//        list.getLength();
+//        list.getHead();
+//        list.getTail();
+//
+//        list.insert(2, 55);
+//        list.printList();
+//        list.getLength();
+//        list.getHead();
+//        list.getTail();
+//
+//        list.remove(3);
+//        list.printList();
+//        list.getLength();
+//        list.getHead();
+//        list.getTail();
+//
+//        list.reverse();
+//        list.printList();
 
-        list.removeLast();
-        list.printList();
-        list.getLength();
-        list.getHead();
-        list.getTail();
+        dll.printList();
+        dll.printHead();
+        dll.printTail();
+        dll.printLength();
 
-        list.prepend(0);
-        list.printList();
-        list.getLength();
-        list.getHead();
-        list.getTail();
-
-        list.removeFirst();
-        list.printList();
-        list.getLength();
-        list.getHead();
-        list.getTail();
-
-        System.out.println(list.get(2).value);
-
-        list.set(2, 32);
-        list.printList();
-        list.getLength();
-        list.getHead();
-        list.getTail();
-
-        list.insert(2, 55);
-        list.printList();
-        list.getLength();
-        list.getHead();
-        list.getTail();
-
-        list.remove(3);
-        list.printList();
-        list.getLength();
-        list.getHead();
-        list.getTail();
-
-        list.reverse();
-        list.printList();
-
+        dll.append(2);
         dll.printList();
         dll.printHead();
         dll.printTail();
