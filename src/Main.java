@@ -97,6 +97,10 @@ public class Main {
         dll.printTail();
         dll.printLength();
 
+        System.out.println(dll.get(2).value);
+
+
+
 
     }
 }
