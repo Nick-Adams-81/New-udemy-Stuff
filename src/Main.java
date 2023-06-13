@@ -42,6 +42,8 @@ public class Main {
         list.getHead();
         list.getTail();
 
+        System.out.println(list.get(2).value);
+
 
 
     }
