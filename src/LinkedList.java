@@ -5,7 +5,7 @@ public class LinkedList {
     private int length;
 
     // Create new Node inner class
-    class Node {
+    static class Node {
         int value;
         Node next;
 
@@ -161,4 +161,5 @@ public class LinkedList {
         }
 
     }
+
 }

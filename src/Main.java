@@ -6,6 +6,7 @@ public class Main {
         Cookie cookie1 = new Cookie("green");
         Cookie cookie2 = new Cookie("blue");
         LinkedList list = new LinkedList(1);
+        DLL dll = new DLL(1);
 
         cookie1.setColor("orange");
         System.out.println(cookie1.getColor());
@@ -65,8 +66,10 @@ public class Main {
         list.reverse();
         list.printList();
 
-
-
+        dll.printList();
+        dll.printHead();
+        dll.printTail();
+        dll.printLength();
 
 
     }
