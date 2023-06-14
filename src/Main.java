@@ -17,6 +17,23 @@ public class Main {
         list.getHead();
         list.getTail();
 
+        Stack stack = new Stack(1);
+
+        stack.printStack();
+        stack.printTop();
+        stack.printHeight();
+
+        stack.push(2);
+        stack.push(32);
+        stack.printStack();
+        stack.printTop();
+        stack.printHeight();
+
+        stack.pop();
+        stack.printStack();
+        stack.printTop();
+        stack.printHeight();
+
 //        list.append(2);
 //        list.append(3);
 //        list.append(4);
