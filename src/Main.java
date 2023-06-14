@@ -26,11 +26,20 @@ public class Main {
         queue.printLength();
 
         queue.enqueue(8);
+        queue.enqueue(7);
         queue.printQueue();
         queue.printLength();
         queue.printFirst();
         queue.printLast();
         queue.printLength();
+
+        queue.dequeue();
+        queue.printQueue();
+        queue.printLength();
+        queue.printFirst();
+        queue.printLast();
+        queue.printLength();
+
 
         stack.printStack();
         stack.printTop();
