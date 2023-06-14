@@ -18,6 +18,19 @@ public class Main {
         list.getTail();
 
         Stack stack = new Stack(1);
+        Queue queue = new Queue(9);
+
+        queue.printQueue();
+        queue.printLength();
+        queue.printFirst();
+        queue.printLength();
+
+        queue.enqueue(8);
+        queue.printQueue();
+        queue.printLength();
+        queue.printFirst();
+        queue.printLast();
+        queue.printLength();
 
         stack.printStack();
         stack.printTop();

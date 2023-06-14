@@ -23,7 +23,7 @@ public class Queue {
 
     public void printQueue() {
         Node temp = first;
-        while(temp.next != null) {
+        while(temp != null) {
             System.out.println(temp.value);
             temp = temp.next;
         }
@@ -35,6 +35,22 @@ public class Queue {
 
     public void printLast() {
         System.out.println("Last: " + last.value);
+    }
+
+    public void printLength() {
+        System.out.println("Length: " + length);
+    }
+
+    public void enqueue(int value) {
+        Node newNode = new Node(value);
+        if(length == 0) {
+            first = newNode;
+            last = newNode;
+        } else {
+            last.next = newNode;
+            last = newNode;
+        }
+        length++;
     }
 
 
