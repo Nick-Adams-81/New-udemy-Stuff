@@ -23,6 +23,18 @@ public class Main {
         BST myBST = new BST();
         System.out.println("root: " + myBST.root);
 
+        myBST.insert(47);
+        myBST.insert(21);
+        myBST.insert(76);
+        myBST.insert(18);
+        myBST.insert(52);
+        myBST.insert(82);
+        myBST.insert(27);
+
+        System.out.println("My bst node: " + myBST.root.left.right.value);
+
+
+
         queue.printQueue();
         queue.printLength();
         queue.printFirst();
