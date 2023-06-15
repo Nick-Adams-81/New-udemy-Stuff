@@ -20,6 +20,9 @@ public class Main {
         Stack stack = new Stack(1);
         Queue queue = new Queue(9);
 
+        BST myBST = new BST();
+        System.out.println("root: " + myBST.root);
+
         queue.printQueue();
         queue.printLength();
         queue.printFirst();
