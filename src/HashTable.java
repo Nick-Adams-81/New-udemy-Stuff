@@ -30,4 +30,13 @@ public class HashTable {
     }
 
 
+    private int hash(String key) {
+        int hash = 0;
+        char[] keyChars = key.toCharArray();
+        for(int i = 0; i < keyChars.length; i++) {
+            int asciiVal = keyChars[i];
+            hash = (hash + asciiVal * 23) % dataMap.length;
+        }
+        return hash;
+    }
 }
