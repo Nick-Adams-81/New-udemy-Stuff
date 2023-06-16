@@ -40,6 +40,9 @@ public class Main {
         HashTable myHash = new HashTable();
         Graph graph = new Graph();
         graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addEdge("A", "B");
+
         graph.printGraph();
 
 
