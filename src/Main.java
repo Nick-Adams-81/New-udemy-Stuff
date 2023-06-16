@@ -41,13 +41,14 @@ public class Main {
 
 
 
-        myHash.set("Nails", 100);
-        myHash.set("Lumber", 80);
+        myHash.set("nails", 100);
+        myHash.set("lumber", 80);
         myHash.set("tile", 50);
         myHash.set("bolts", 200);
         myHash.set("screws", 20);
         myHash.printTable();
 
+        System.out.println(myHash.get("bolts"));
         System.out.println(" ");
         queue.printQueue();
         queue.printLength();
