@@ -48,6 +48,7 @@ public class Main {
         myHash.set("screws", 20);
         myHash.printTable();
 
+        System.out.println(myHash.keys());
         System.out.println(myHash.get("bolts"));
         System.out.println(" ");
         queue.printQueue();
