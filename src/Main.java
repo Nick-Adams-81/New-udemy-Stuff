@@ -37,6 +37,11 @@ public class Main {
 
 
 
+        HashTable myHash = new HashTable();
+
+        myHash.printTable();
+
+        System.out.println(" ");
         queue.printQueue();
         queue.printLength();
         queue.printFirst();
