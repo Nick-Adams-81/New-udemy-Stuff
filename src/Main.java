@@ -31,7 +31,8 @@ public class Main {
         myBST.insert(82);
         myBST.insert(27);
 
-        System.out.println(myBST.contains(26));
+        System.out.println(myBST.contains(27));
+        System.out.println("R contains method: " + myBST.rContains(27));
 
         System.out.println("My bst node: " + myBST.root.left.right.value);
 
