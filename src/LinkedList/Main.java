@@ -8,5 +8,11 @@ public class Main {
         myLinkedList.getHead();
         myLinkedList.getTail();
         myLinkedList.getLength();
+
+        myLinkedList.append(5);
+        myLinkedList.printList();
+        myLinkedList.getHead();
+        myLinkedList.getTail();
+        myLinkedList.getLength();
     }
 }

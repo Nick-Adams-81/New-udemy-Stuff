@@ -42,6 +42,18 @@ public class LinkedList {
     }
 
     // append method: O(1)
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if(length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        length++;
+    }
+
     // remove last: O(n)
     // prepend method: O(1)
     // remove first: O(1)
