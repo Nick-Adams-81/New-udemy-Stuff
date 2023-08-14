@@ -98,7 +98,18 @@ public class LinkedList {
         }
         return temp;
     }
+
+    public Node get(int index) {
+        if(index >= length || index < 0) return null;
+        Node temp = head;
+        for(int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
     // insert : O(n)
+
     // remove item: O(n)
     // find by value: O(n)
 
