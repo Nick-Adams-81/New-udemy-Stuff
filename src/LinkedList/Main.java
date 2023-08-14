@@ -38,6 +38,18 @@ public class Main {
 
         System.out.println(myLinkedList.get(1).value);
 
+        myLinkedList.set(1, 500);
+        myLinkedList.printList();
+        myLinkedList.getHead();
+        myLinkedList.getTail();
+        myLinkedList.getLength();
+
+        myLinkedList.insert(2, 25);
+        myLinkedList.printList();
+        myLinkedList.getHead();
+        myLinkedList.getTail();
+        myLinkedList.getLength();
+
 
 
     }
