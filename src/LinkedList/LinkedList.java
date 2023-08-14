@@ -85,7 +85,19 @@ public class LinkedList {
         }
         length++;
     }
+
     // remove first: O(1)
+    public Node removeFirst() {
+        if(length == 0) return null;
+        Node temp = head;
+        head = head.next;
+        temp.next = null;
+        length--;
+        if(length == 0) {
+            tail = null;
+        }
+        return temp;
+    }
     // insert : O(n)
     // remove item: O(n)
     // find by value: O(n)
