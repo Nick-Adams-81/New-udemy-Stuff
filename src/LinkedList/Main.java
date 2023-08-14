@@ -50,6 +50,12 @@ public class Main {
         myLinkedList.getTail();
         myLinkedList.getLength();
 
+        myLinkedList.remove(2);
+        myLinkedList.printList();
+        myLinkedList.getHead();
+        myLinkedList.getTail();
+        myLinkedList.getLength();
+
 
 
     }
