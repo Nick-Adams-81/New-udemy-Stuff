@@ -72,7 +72,19 @@ public class LinkedList {
         }
         return temp;
     }
+
     // prepend method: O(1)
+    public void prepend(int value) {
+        Node newNode = new Node(value);
+        if(length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
+    }
     // remove first: O(1)
     // insert : O(n)
     // remove item: O(n)
