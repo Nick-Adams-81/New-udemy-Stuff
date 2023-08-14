@@ -51,6 +51,13 @@ public class Main {
         myLinkedList.getLength();
 
         myLinkedList.remove(2);
+        myLinkedList.remove(1);
+        myLinkedList.printList();
+        myLinkedList.getHead();
+        myLinkedList.getTail();
+        myLinkedList.getLength();
+
+        myLinkedList.reverse();
         myLinkedList.printList();
         myLinkedList.getHead();
         myLinkedList.getTail();
