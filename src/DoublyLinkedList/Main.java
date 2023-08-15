@@ -34,5 +34,10 @@ public class Main {
         myDLL.getHead();
         myDLL.getTail();
         myDLL.getLength();
+
+        myDLL.append(3);
+        myDLL.append(4);
+        myDLL.append(5);
+        System.out.println(myDLL.get(2).value);
     }
 }
