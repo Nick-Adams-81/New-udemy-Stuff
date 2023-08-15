@@ -64,6 +64,16 @@ public class Main {
         myLinkedList.getLength();
 
 
+        myLinkedList.append(7);
+        myLinkedList.append(12);
+        myLinkedList.append(23);
+        myLinkedList.printList();
+        myLinkedList.getHead();
+        myLinkedList.getTail();
+        myLinkedList.getLength();
+        System.out.println("Middle node: " + myLinkedList.findMiddleNode().value);
+
+
 
     }
 }
