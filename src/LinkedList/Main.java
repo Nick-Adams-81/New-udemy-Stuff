@@ -90,6 +90,10 @@ public class Main {
         newLL.reverseBetween(1, 3);
         newLL.printList();
 
+        System.out.println("");
+        newLL.partitionList(2);
+        newLL.printList();
+
 
 
 
