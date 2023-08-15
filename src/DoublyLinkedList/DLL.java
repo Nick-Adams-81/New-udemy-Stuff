@@ -13,7 +13,7 @@ public class DLL {
         length = 1;
     }
 
-    class Node {
+    static class Node {
         int value;
         Node next;
         Node prev;
@@ -55,4 +55,21 @@ public class DLL {
         }
         length++;
     }
+
+    public Node removeLast() {
+        if(length == 0) return null;
+        Node temp = tail;
+        if(length == 1) {
+            head = null;
+            tail = null;
+        } else {
+            tail = tail.prev;
+            temp.prev = null;
+            tail.next = null;
+        }
+        length--;
+        return temp;
+    }
+
+
 }
