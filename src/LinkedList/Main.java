@@ -85,8 +85,11 @@ public class Main {
         boolean result = newLL.hasLoop();
         System.out.println(result);
 
-        newLL.getHead();
-        System.out.println(newLL.findKthFromEnd(3).value);
+
+        //System.out.println(newLL.findKthFromEnd(3).value);
+        newLL.reverseBetween(1, 3);
+        newLL.printList();
+
 
 
 
