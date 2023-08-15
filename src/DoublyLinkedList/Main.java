@@ -50,5 +50,17 @@ public class Main {
         myDLL.getHead();
         myDLL.getTail();
         myDLL.getLength();
+
+        myDLL.insert(1, 32);
+        myDLL.printList();
+        myDLL.getHead();
+        myDLL.getTail();
+        myDLL.getLength();
+
+        myDLL.remove(1);
+        myDLL.printList();
+        myDLL.getHead();
+        myDLL.getTail();
+        myDLL.getLength();
     }
 }
