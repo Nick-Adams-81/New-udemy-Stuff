@@ -42,4 +42,17 @@ public class DLL {
     public void getLength() {
         System.out.println("Length: " + length);
     }
+
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if(length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.prev = tail;
+            tail.next = newNode;
+            tail = newNode;
+        }
+        length++;
+    }
 }
