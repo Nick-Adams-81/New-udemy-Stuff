@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
 
         LinkedList myLinkedList = new LinkedList(4);
+        LinkedList newLL = new LinkedList(1);
+
         myLinkedList.printList();
         myLinkedList.getHead();
         myLinkedList.getTail();
@@ -72,6 +74,19 @@ public class Main {
         myLinkedList.getTail();
         myLinkedList.getLength();
         System.out.println("Middle node: " + myLinkedList.findMiddleNode().value);
+
+        newLL.append(2);
+        newLL.append(3);
+        newLL.append(4);
+        newLL.append(5);
+
+        newLL.printList();
+
+        boolean result = newLL.hasLoop();
+        System.out.println(result);
+
+        newLL.getHead();
+        System.out.println(newLL.findKthFromEnd(3).value);
 
 
 

@@ -174,4 +174,31 @@ public class LinkedList {
         return slow;
     }
 
+    // find if list has loop
+    public boolean hasLoop() {
+        Node fast = head;
+        Node slow = head;
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast) return true;
+        }
+        return false;
+    }
+
+    // find nth k from end
+    public Node findKthFromEnd(int k) {
+        Node fast = head;
+        Node slow = head;
+        for(int i = 0; i < k; i++) {
+            if(fast == null) return null;
+            fast = fast.next;
+        }
+        while(fast != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
+    }
+
 }
