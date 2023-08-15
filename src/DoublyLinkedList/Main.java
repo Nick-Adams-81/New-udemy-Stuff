@@ -21,5 +21,12 @@ public class Main {
         myDLL.getHead();
         myDLL.getTail();
         myDLL.getLength();
+
+        myDLL.prepend(0);
+        myDLL.append(2);
+        myDLL.printList();
+        myDLL.getHead();
+        myDLL.getTail();
+        myDLL.getLength();
     }
 }
