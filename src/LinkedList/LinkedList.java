@@ -1,5 +1,8 @@
 package LinkedList;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LinkedList {
 
     private Node head;
@@ -240,6 +243,22 @@ public class LinkedList {
         prev2.next = null;
         prev1.next = dummy2.next;
         head = dummy1.next;
+    }
+
+    public void removeDuplicates() {
+        Set<Integer> set = new HashSet<>();
+        Node prev = null;
+        Node current = head;
+        while(current != null) {
+            if(set.contains(current.value)) {
+                prev.next = current.next;
+                length--;
+            } else {
+                set.add(current.value);
+                prev = current;
+            }
+            current = current.next;
+        }
     }
 
 

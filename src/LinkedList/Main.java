@@ -79,6 +79,7 @@ public class Main {
         newLL.append(3);
         newLL.append(4);
         newLL.append(5);
+        newLL.prepend(5);
 
         newLL.printList();
 
@@ -92,6 +93,10 @@ public class Main {
 
         System.out.println("");
         newLL.partitionList(2);
+        newLL.printList();
+
+        System.out.println("");
+        newLL.removeDuplicates();
         newLL.printList();
 
 
