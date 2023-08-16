@@ -68,5 +68,8 @@ public class Main {
         myDLL.getHead();
         myDLL.getTail();
         myDLL.getLength();
+
+        //myDLL.reverse();
+
     }
 }
