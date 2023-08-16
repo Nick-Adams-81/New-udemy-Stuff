@@ -79,5 +79,11 @@ public class Main {
 
         System.out.println(newDLL.isPalindrome());
 
+        System.out.println("");
+        newDLL.printList();
+        newDLL.swapPairs();
+        System.out.println("----");
+        newDLL.printList();
+
     }
 }

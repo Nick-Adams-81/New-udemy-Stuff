@@ -196,5 +196,29 @@ public class DLL {
         return true;
     }
 
+    public void swapPairs() {
+        Node dummy = new Node(0);
+        dummy.next = head;
+        Node prev = dummy;
+        while(head != null && head.next != null) {
+            Node firstNode = head;
+            Node secondNode = head.next;
+
+            prev.next = secondNode;
+            firstNode.next = secondNode.next;
+            secondNode.next = firstNode;
+
+            secondNode.prev = prev;
+            firstNode.prev = prev;
+            if(firstNode.next != null) {
+                firstNode.next.prev = firstNode;
+            }
+            head = firstNode.next;
+            prev = firstNode;
+        }
+        head = dummy.next;
+        if(head != null) head.prev = null;
+    }
+
 
 }
