@@ -159,5 +159,13 @@ public class DLL {
         return temp;
     }
 
+    public void swapFirstLast() {
+        Node temp1 = head;
+        Node temp2 = tail;
+        head = temp2;
+        tail = temp1;
+    }
+
+
 
 }
