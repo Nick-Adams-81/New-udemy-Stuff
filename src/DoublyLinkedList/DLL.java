@@ -1,5 +1,8 @@
 package DoublyLinkedList;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DLL {
 
     private Node head;
@@ -179,6 +182,18 @@ public class DLL {
         temp = head;
         head = tail;
         tail = temp;
+    }
+
+    public boolean isPalindrome() {
+        if(length <= 1) return true;
+        Node forward = head;
+        Node backward = tail;
+        for(int i = 0; i < length / 2; i++) {
+            if(forward.value != backward.value) return false;
+            forward = forward.next;
+            backward = backward.prev;
+        }
+        return true;
     }
 
 

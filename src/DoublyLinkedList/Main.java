@@ -71,5 +71,13 @@ public class Main {
 
         //myDLL.reverse();
 
+        DLL newDLL = new DLL(1);
+        newDLL.append(2);
+        newDLL.append(3);
+        newDLL.append(2);
+        //newDLL.append(1);
+
+        System.out.println(newDLL.isPalindrome());
+
     }
 }
