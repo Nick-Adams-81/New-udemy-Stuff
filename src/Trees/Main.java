@@ -16,5 +16,7 @@ public class Main {
         tree.insert(27);
 
         System.out.println(tree.root.left.right.value);
+
+        System.out.println(tree.contains(4));
     }
 }
