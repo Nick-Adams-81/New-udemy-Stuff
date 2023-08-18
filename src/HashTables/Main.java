@@ -14,6 +14,8 @@ public class Main {
         myHash.set("screws", 140);
         myHash.printTable();
 
-        System.out.println(myHash.get("nail"));
+        System.out.println(myHash.get("nails"));
+
+        System.out.println(myHash.keys());
     }
 }
