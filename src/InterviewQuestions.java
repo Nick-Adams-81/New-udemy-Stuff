@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Stack;
+import java.util.*;
 
 public class InterviewQuestions {
 
@@ -66,6 +65,21 @@ public class InterviewQuestions {
         return false;
     }
 
+    // find duplicates and return them
+    public static List<Integer> findDuplicates(int[] arr) {
+        Map<Integer, Integer> numCounts = new HashMap<>();
+        for(int num: arr) {
+            numCounts.put(num, numCounts.getOrDefault(num, 0) + 1);
+        }
+        List<Integer> duplicates = new ArrayList<>();
+        for(Map.Entry<Integer, Integer> entry : numCounts.entrySet()) {
+            if(entry.getValue() > 1) {
+                duplicates.add(entry.getKey());
+            }
+        }
+        return duplicates;
+    }
+
 
     public static void main(String[] args) {
         Stack<Integer> myStack = new Stack<>();
@@ -80,10 +94,13 @@ public class InterviewQuestions {
         System.out.println(reverseString("hello world"));
         System.out.println(validParentheses("[]()}"));
 
-        int[] arr1 = {1, 2, 3};
-        int[] arr2 = {3, 4, 5};
+        int[] arr1 = {1, 2, 3, 8, 9, 10, 2, 3, 9};
+        int[] arr2 = {3, 4, 5, 6, 7, 8};
 
         System.out.println(itemInCommon(arr1, arr2));
         System.out.println(itemInCommon2(arr1, arr2));
+        System.out.println(findDuplicates(arr1));
+
+
     }
 }
