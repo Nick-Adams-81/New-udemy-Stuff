@@ -42,6 +42,7 @@ public class HashTable {
         return hash;
     }
 
+
     public void set(String key, int value) {
         int index = hash(key);
         Node newNode = new Node(key, value);

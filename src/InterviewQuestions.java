@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Stack;
 
 public class InterviewQuestions {
@@ -43,6 +44,27 @@ public class InterviewQuestions {
         }
     }
 
+    // seeing if arrays have a same value O(n2)
+    public static boolean itemInCommon(int[] arr1, int[] arr2) {
+        for(int i : arr1) {
+            for(int j : arr2) {
+                if(i == j) return true;
+            }
+        }
+        return false;
+    }
+
+    // arrays having item in common O(n)
+    public static boolean itemInCommon2(int[] arr1, int[] arr2) {
+        HashMap<Integer, Boolean> myHash = new HashMap<>();
+        for(int i : arr1) {
+            myHash.put(i, true);
+        }
+        for(int j : arr2) {
+            if(myHash.get(j) != null) return true;
+        }
+        return false;
+    }
 
 
     public static void main(String[] args) {
@@ -57,5 +79,11 @@ public class InterviewQuestions {
         System.out.println("Sorted: " + myStack);
         System.out.println(reverseString("hello world"));
         System.out.println(validParentheses("[]()}"));
+
+        int[] arr1 = {1, 2, 3};
+        int[] arr2 = {3, 4, 5};
+
+        System.out.println(itemInCommon(arr1, arr2));
+        System.out.println(itemInCommon2(arr1, arr2));
     }
 }
