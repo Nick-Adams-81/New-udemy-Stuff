@@ -126,6 +126,8 @@ public class InterviewQuestions {
         return new int[]{};
     }
 
+    //TODO: sub array sum using hash table
+
     public static void main(String[] args) {
         Stack<Integer> myStack = new Stack<>();
         myStack.push(7);
