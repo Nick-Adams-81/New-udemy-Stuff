@@ -80,6 +80,19 @@ public class InterviewQuestions {
         return duplicates;
     }
 
+    // finding first non repeating character using a map
+    public static Character firstNonRepeatingChar(String str) {
+        Map<Character, Integer> charCounts = new HashMap<>();
+        for(int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            charCounts.put(c, charCounts.getOrDefault(c, 0) + 1);
+        }
+        for(int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if(charCounts.get(c) == 1) return c;
+        }
+        return null;
+    }
 
     public static void main(String[] args) {
         Stack<Integer> myStack = new Stack<>();
@@ -100,6 +113,7 @@ public class InterviewQuestions {
         System.out.println(itemInCommon(arr1, arr2));
         System.out.println(itemInCommon2(arr1, arr2));
         System.out.println(findDuplicates(arr1));
+        System.out.println(firstNonRepeatingChar("lleetcode"));
 
 
     }
