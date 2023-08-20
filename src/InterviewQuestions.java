@@ -112,6 +112,20 @@ public class InterviewQuestions {
         return new ArrayList<>(anagramGroups.values());
     }
 
+    // two sum using map to store values
+    public static int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> numMap = new HashMap<>();
+        for(int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            int comp = target - num;
+            if(numMap.containsKey(comp)) {
+                return new int[]{numMap.get(comp), i};
+            }
+            numMap.put(num, i);
+        }
+        return new int[]{};
+    }
+
     public static void main(String[] args) {
         Stack<Integer> myStack = new Stack<>();
         myStack.push(7);
@@ -135,6 +149,9 @@ public class InterviewQuestions {
 
         String[] myStrings = { "eat", "tea", "tan", "ate", "nat", "bat", "tab" };
         System.out.println(groupAnagrams(myStrings));
+
+        int[] arr3 = {2, 7, 11, 15};
+        System.out.println(Arrays.toString(twoSum(arr3, 9)));
 
 
     }
