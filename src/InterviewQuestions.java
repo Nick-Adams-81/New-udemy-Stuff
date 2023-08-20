@@ -94,6 +94,24 @@ public class InterviewQuestions {
         return null;
     }
 
+    // find anagrams using hash maps
+    public static List<List<String>> groupAnagrams(String[] strings) {
+        Map<String, List<String>> anagramGroups = new HashMap<>();
+        for(String string : strings) {
+            char[] chars = string.toCharArray();
+            Arrays.sort(chars);
+            String canonical = new String(chars);
+            if(anagramGroups.containsKey(canonical)) {
+                anagramGroups.get(canonical).add(string);
+            } else {
+                List<String> group = new ArrayList<>();
+                group.add(string);
+                anagramGroups.put(canonical, group);
+            }
+        }
+        return new ArrayList<>(anagramGroups.values());
+    }
+
     public static void main(String[] args) {
         Stack<Integer> myStack = new Stack<>();
         myStack.push(7);
@@ -114,6 +132,9 @@ public class InterviewQuestions {
         System.out.println(itemInCommon2(arr1, arr2));
         System.out.println(findDuplicates(arr1));
         System.out.println(firstNonRepeatingChar("lleetcode"));
+
+        String[] myStrings = { "eat", "tea", "tan", "ate", "nat", "bat", "tab" };
+        System.out.println(groupAnagrams(myStrings));
 
 
     }
