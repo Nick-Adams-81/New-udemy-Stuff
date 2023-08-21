@@ -1,3 +1,4 @@
+import java.sql.Array;
 import java.util.*;
 
 public class InterviewQuestions {
@@ -163,6 +164,23 @@ public class InterviewQuestions {
         return true;
     }
 
+    // find two numbers from 2 different arrays who's sums equal the target
+    public static List<int[]> findPairs(int[] arr1, int[] arr2, int target) {
+        Set<Integer> set = new HashSet<>();
+        List<int[]> pairs = new ArrayList<>();
+
+        for(int num : arr1) {
+            set.add(num);
+        }
+        for(int num : arr2) {
+            int comp = target - num;
+            if(set.contains(comp)) {
+                pairs.add(new int[]{comp, num});
+            }
+        }
+        return pairs;
+    }
+
     public static void main(String[] args) {
         Stack<Integer> myStack = new Stack<>();
         myStack.push(7);
@@ -174,7 +192,7 @@ public class InterviewQuestions {
         sortStack(myStack);
         System.out.println("Sorted: " + myStack);
         System.out.println(reverseString("hello world"));
-        System.out.println(validParentheses("[]()}"));
+        System.out.println(validParentheses("[](){}"));
 
         int[] arr1 = {1, 2, 3, 8, 9, 10, 2, 3, 9};
         int[] arr2 = {3, 4, 5, 6, 7, 8};
@@ -209,6 +227,10 @@ public class InterviewQuestions {
         System.out.println("Duplicates removed: " + removeDupes(nums));
 
         System.out.println(hasUniqueChars("helo"));
+        int[] array1 = {1, 2, 3, 4, 5};
+        int[] array2 = {2, 4, 6, 8, 10};
+        int target = 7;
+        System.out.println(findPairs(array1, array2, target));
 
 
     }
