@@ -144,6 +144,13 @@ public class InterviewQuestions {
         }
         return new int[] {};
     }
+
+    // ----- SETS ----- //
+    public static List<Integer> removeDupes(List<Integer> myList) {
+        Set<Integer> uniqueSet = new HashSet<>(myList);
+        return new ArrayList<>(uniqueSet);
+    }
+
     public static void main(String[] args) {
         Stack<Integer> myStack = new Stack<>();
         myStack.push(7);
