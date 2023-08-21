@@ -2,6 +2,8 @@ import java.util.*;
 
 public class InterviewQuestions {
 
+
+    // ----- STACKS ----- //
     // stack in reversed string
     public static String reverseString(String str) {
         var stack = new Stack<Character>();
@@ -65,6 +67,8 @@ public class InterviewQuestions {
         return false;
     }
 
+
+    // ----- MAPS ----- //
     // find duplicates and return them
     public static List<Integer> findDuplicates(int[] arr) {
         Map<Integer, Integer> numCounts = new HashMap<>();
@@ -126,8 +130,20 @@ public class InterviewQuestions {
         return new int[]{};
     }
 
-    //TODO: sub array sum using hash table
-
+    // sub array sum using hash table
+    public static int[] subarraySum(int[] nums, int target) {
+        Map<Integer, Integer> sumIndex = new HashMap<>();
+        sumIndex.put(0, -1);
+        int currentSum = 0;
+        for(int i = 0; i < nums.length; i++) {
+            currentSum += nums[i];
+            if(sumIndex.containsKey(currentSum - target)) {
+                return new int[]{sumIndex.get(currentSum - target) + 1, i};
+            }
+            sumIndex.put(currentSum, i);
+        }
+        return new int[] {};
+    }
     public static void main(String[] args) {
         Stack<Integer> myStack = new Stack<>();
         myStack.push(7);
@@ -154,6 +170,8 @@ public class InterviewQuestions {
 
         int[] arr3 = {2, 7, 11, 15};
         System.out.println(Arrays.toString(twoSum(arr3, 9)));
+
+        System.out.println(Arrays.toString(subarraySum(arr1, 19)));
 
 
     }
