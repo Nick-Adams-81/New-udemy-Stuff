@@ -6,6 +6,12 @@ public class Main {
 
         Graph graph = new Graph();
         graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.printGraph();
+
+        graph.addEdge("A", "B");
+        graph.addEdge("A", "C");
         graph.printGraph();
     }
 }
