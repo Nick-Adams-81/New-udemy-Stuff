@@ -146,9 +146,21 @@ public class InterviewQuestions {
     }
 
     // ----- SETS ----- //
+
+    // remove duplicates
     public static List<Integer> removeDupes(List<Integer> myList) {
         Set<Integer> uniqueSet = new HashSet<>(myList);
         return new ArrayList<>(uniqueSet);
+    }
+
+    // finding if a string has all unique characters
+    public static boolean hasUniqueChars(String str) {
+        Set<Character> set = new HashSet<>();
+        for(char c : str.toCharArray()) {
+            if(set.contains(c)) return false;
+            set.add(c);
+        }
+        return true;
     }
 
     public static void main(String[] args) {
@@ -178,7 +190,25 @@ public class InterviewQuestions {
         int[] arr3 = {2, 7, 11, 15};
         System.out.println(Arrays.toString(twoSum(arr3, 9)));
 
+        List<Integer> nums = new ArrayList<>();
+        nums.add(1);
+        nums.add(2);
+        nums.add(3);
+        nums.add(4);
+        nums.add(4);
+        nums.add(5);
+        nums.add(6);
+        nums.add(6);
+        nums.add(6);
+        nums.add(7);
+        nums.add(7);
+        nums.add(8);
+        nums.add(9);
+        System.out.println("Full list: " + nums);
         System.out.println(Arrays.toString(subarraySum(arr1, 19)));
+        System.out.println("Duplicates removed: " + removeDupes(nums));
+
+        System.out.println(hasUniqueChars("helo"));
 
 
     }
