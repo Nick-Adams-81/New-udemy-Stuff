@@ -181,6 +181,27 @@ public class InterviewQuestions {
         return pairs;
     }
 
+    // find longest consecutive sequence ex:[1, 2, 3, 4, 54, 24] = 4
+    public static int findLongestSequence(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for(int num : nums) {
+            set.add(num);
+        }
+        int longest = 0;
+        for(int num : set) {
+            if(!set.contains(num -1)) {
+                int currentNum = num;
+                int currentStreak = 1;
+                while(set.contains(currentNum + 1)) {
+                    currentNum++;
+                    currentStreak++;
+                }
+                longest = Math.max(longest, currentStreak);
+            }
+        }
+        return longest;
+    }
+
     public static void main(String[] args) {
         Stack<Integer> myStack = new Stack<>();
         myStack.push(7);
@@ -231,6 +252,9 @@ public class InterviewQuestions {
         int[] array2 = {2, 4, 6, 8, 10};
         int target = 7;
         System.out.println(findPairs(array1, array2, target));
+
+        int[] myNums = {1, 2, 3, 4, 54, 26};
+        System.out.println(findLongestSequence(myNums));
 
 
     }
