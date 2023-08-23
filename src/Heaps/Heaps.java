@@ -43,7 +43,7 @@ public class Heaps {
         }
     }
 
-    // min heap
+    // min heap insert
     public void minHeapInsert(int value) {
         heap.add(value);
         int current = heap.size() -1;
