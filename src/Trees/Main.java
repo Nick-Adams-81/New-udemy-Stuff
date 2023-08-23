@@ -15,6 +15,8 @@ public class Main {
         tree.insert(82);
         tree.insert(27);
 
+
+
         System.out.println(tree.root.left.right.value);
         System.out.println(tree.contains(47));
         System.out.println(tree.contains(4));
@@ -31,6 +33,13 @@ public class Main {
         System.out.println("Root -> : " + newTree.root.value);
         System.out.println("Root -> Left: " + newTree.root.left.value);
         System.out.println("Root -> Right: " + newTree.root.right.value);
+
+        newTree.deleteNode(3);
+        System.out.println("Root -> : " + newTree.root.value);
+        System.out.println("Root -> Left: " + newTree.root.left.value);
+        System.out.println("Root -> Right: " + newTree.root.right);
+
+
 
     }
 }
