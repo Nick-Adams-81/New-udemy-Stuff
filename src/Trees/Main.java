@@ -20,5 +20,9 @@ public class Main {
         System.out.println(tree.contains(4));
 
         System.out.println(tree.rContains(2));
+
+        tree.rInsert(23);
+        System.out.println(tree.rContains(23));
+
     }
 }
