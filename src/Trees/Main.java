@@ -18,5 +18,7 @@ public class Main {
         System.out.println(tree.root.left.right.value);
         System.out.println(tree.contains(47));
         System.out.println(tree.contains(4));
+
+        System.out.println(tree.rContains(2));
     }
 }
