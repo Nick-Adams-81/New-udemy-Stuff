@@ -24,5 +24,13 @@ public class Main {
         tree.rInsert(23);
         System.out.println(tree.rContains(23));
 
+        BST newTree = new BST();
+        newTree.rInsert(2);
+        newTree.rInsert(1);
+        newTree.rInsert(3);
+        System.out.println("Root -> : " + newTree.root.value);
+        System.out.println("Root -> Left: " + newTree.root.left.value);
+        System.out.println("Root -> Right: " + newTree.root.right.value);
+
     }
 }

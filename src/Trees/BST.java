@@ -72,7 +72,7 @@ public class BST {
         if(currentNode == null) return new Node(value);
         if(value < currentNode.value) {
             currentNode.left = rInsert(currentNode.left, value);
-        } else {
+        } else if(value > currentNode.value){
             currentNode.right = rInsert(currentNode.right, value);
         }
         return currentNode;
