@@ -1,19 +1,14 @@
 package Sorts;
+import java.util.Arrays;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        List<Integer> nums = new ArrayList<>();
-        nums.add(12);
-        nums.add(21);
-        nums.add(39);
-        nums.add(16);
-        nums.add(90);
-        nums.add(1);
+        int[] nums = {92, 7, 34, 13, 21, 11, 3, 98};
 
-        System.out.println("Unsorted: " + nums);
+        System.out.println("Unsorted: " + Arrays.toString(nums));
+        BubbleSort.bubbleSort(nums);
+        System.out.println("Sorted: " + Arrays.toString(nums));
     }
 }
