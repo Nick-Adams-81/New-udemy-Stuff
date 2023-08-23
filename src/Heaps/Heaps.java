@@ -36,7 +36,7 @@ public class Heaps {
     public void insert(int value) {
         heap.add(value);
         int current = heap.size() -1;
-        while(current > 0 && heap.get(current) > heap.get(current)) {
+        while(current > 0 && heap.get(current) > heap.get(parent(current))) {
             swap(current, parent(current));
             current = parent(current);
         }
@@ -72,4 +72,6 @@ public class Heaps {
         sinkDown(0);
         return maxValue;
     }
+
+
 }
