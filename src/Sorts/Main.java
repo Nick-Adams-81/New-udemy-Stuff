@@ -25,5 +25,9 @@ public class Main {
         int[] array1 = {1, 3, 7, 8};
         int[] array2 = {2, 4, 5, 6};
         System.out.println(Arrays.toString(MergeSort.merge(array1, array2)));
+
+        int[] mergeArr = {3, 1, 4, 2};
+        System.out.println("Unsorted: " + Arrays.toString(mergeArr));
+        System.out.println("Sorted: " + Arrays.toString(MergeSort.mergeSort(mergeArr)));
     }
 }

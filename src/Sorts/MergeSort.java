@@ -1,5 +1,7 @@
 package Sorts;
 
+import java.util.Arrays;
+
 public class MergeSort {
 
     public static int[] merge(int[] arr1, int[] arr2) {
@@ -31,5 +33,13 @@ public class MergeSort {
         return combined;
     }
 
+    public static int[] mergeSort(int[] arr) {
+        if(arr.length == 1) return arr;
+        int midIndex = arr.length / 2;
 
+        int[] left = mergeSort(Arrays.copyOfRange(arr, 0, midIndex));
+        int[] right = mergeSort(Arrays.copyOfRange(arr, midIndex, arr.length));
+
+        return merge(left, right);
+    }
 }
