@@ -21,5 +21,9 @@ public class Main {
         System.out.println("Unsorted: " + Arrays.toString(nums3));
         InsertionSort.insertionSort(nums3);
         System.out.println("Sorted: " + Arrays.toString(nums3));
+
+        int[] array1 = {1, 3, 7, 8};
+        int[] array2 = {2, 4, 5, 6};
+        System.out.println(Arrays.toString(MergeSort.merge(array1, array2)));
     }
 }
