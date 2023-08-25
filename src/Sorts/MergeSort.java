@@ -33,6 +33,7 @@ public class MergeSort {
         return combined;
     }
 
+    // tc:O(n log n) sc: o(n)
     public static int[] mergeSort(int[] arr) {
         if(arr.length == 1) return arr;
         int midIndex = arr.length / 2;
