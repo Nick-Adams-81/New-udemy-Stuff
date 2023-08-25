@@ -16,7 +16,8 @@ public class Main {
         tree.insert(27);
 
 
-        System.out.println(tree.BFS());
+        System.out.println("Breadth first search: " + tree.BFS());
+        System.out.println("Depth first search pre order " + tree.DFSPreOrder());
         System.out.println(tree.root.left.right.value);
         System.out.println(tree.contains(47));
         System.out.println(tree.contains(4));
