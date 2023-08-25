@@ -20,5 +20,16 @@ public class QuickSort {
         return swapIndex;
     }
 
+    public static void quickSortHelper(int[] arr, int left, int right) {
+        int pivotIndex = pivot(arr, left, right);
+        if(left < right) {
+            quickSortHelper(arr, left, pivotIndex -1);
+            quickSortHelper(arr, pivotIndex + 1, right);
+        }
+    }
+
+    public static void quickSort(int[] index) {
+        quickSortHelper(index, 0, index.length -1);
+    }
 
 }

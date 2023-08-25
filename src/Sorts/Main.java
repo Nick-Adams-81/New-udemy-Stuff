@@ -29,5 +29,12 @@ public class Main {
         int[] mergeArr = {3, 1, 4, 2};
         System.out.println("Unsorted: " + Arrays.toString(mergeArr));
         System.out.println("Sorted: " + Arrays.toString(MergeSort.mergeSort(mergeArr)));
+
+        int[] myArray = {4, 6 ,1, 7, 3, 2, 5};
+
+        System.out.println(Arrays.toString(myArray));
+
+        QuickSort.quickSort(myArray);
+        System.out.println(Arrays.toString(myArray));
     }
 }
